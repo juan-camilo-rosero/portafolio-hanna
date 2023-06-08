@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    font-family: 'Bitter', serif;
+}
+
+:root{
+    --primary-color: #E1D5BD;
+    --secondary-color: #5A4F39;
+    --third-color: #EDE5D4;
+    --fourth-color: #392D16;
+}
+
+html{
+    background-color: var(--secondary-color);
+}
+
+p::selection, input::selection, h1::selection{
+    background-color: var(--secondary-color);
+    color: var(--primary-color)
+}
+
+/*Header*/
+
+header{
+    width: 100vw;
+    height: 15vh;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+}
+
+h1{
+    font-weight: 400;
+    color: var(--secondary-color);
+}
+
+.line{
+    width: 100vw;
+    height: 1px;
+    background-color: var(--secondary-color);
+    position: fixed;
+    margin-top: 15vh;
+}
+
+/*----- Transition -----*/
+
+/*#transition{
+    position: absolute;
+    width: 100vw;
+    height: 0;
+    background-color: var(--secondary-color);
+    transition: .5s;
+}
+
+.active{
+    height: 100vh !important;
+}*/
+
+/*----- Login -----*/
+
+#login{
+    height: 85vh;
+    background-color: var(--third-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 15vh;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 65vh;
+}
+
+.input p{
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    padding-bottom: 1.5rem;
+}
+
+.input input{
+    width: 60vw;
+    padding: .7rem 5vw;
+    font-size: 1.2rem;
+    outline: none;
+    background-color: var(--third-color);
+    border: solid var(--secondary-color) 1px;
+    color: var(--secondary-color);
+}
+
+#login-btn{
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+    padding: .7rem 10vw;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#login-btn:hover{
+    background-color: var(--fourth-color);
+}
+
+/*----- Responsive -----*/
+
+@media (min-width: 1000px){
+    h1{
+        font-size: 4rem;
+        font-weight: 300;
+    }
+
+    .line{
+        height: 2px;
+        width: 80vw;
+    }
+
+    #login{
+        background-color: var(--primary-color);
+    }
+
+    .inputs{
+        height: 75vh;
+    }
+
+    .inputs p{
+        font-size: 2.5rem;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .inputs input{
+        padding: 1rem 2vw;
+        width: 25vw;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    #login-btn{
+        width: 20vw;
+        padding: 1rem 2vw;
+        font-size: 2.5rem;
+        color: var(--primary-color);
+    }
+}

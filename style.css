@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    font-family: 'Bitter', serif;
+}
+
+:root{
+    --primary-color: #E1D5BD;
+    --secondary-color: #5A4F39;
+    --third-color: #EDE5D4;
+    --fourth-color: #392D16;
+}
+
+html{
+    background-color: var(--primary-color);
+    height: 200vh;
+}
+
+p::selection, input::selection, h1::selection, h2::selection, a::selection{
+    background-color: var(--secondary-color);
+    color: var(--primary-color)
+}
+
+.none{
+    display: none;
+}
+
+/*----- Header -----*/
+
+header{
+    width: 100vw;
+    height: 15vh;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+}
+
+h1{
+    font-weight: 400;
+    color: var(--secondary-color);
+}
+
+.line{
+    width: 100vw;
+    height: 1px;
+    background-color: var(--secondary-color);
+    position: fixed;
+    margin-top: 15.1vh;
+}
+
+.row{
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row img{
+    height: 10vh;
+    padding: 0 2rem;
+}
+
+.menu{
+    width: 5rem;
+    height: 5rem;
+}
+
+/*----- Main -----*/
+
+main{
+    padding-top: 15vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--third-color);
+    padding-bottom: 3rem;
+}
+
+.main-title{
+    font-weight: 400;
+    color: var(--secondary-color);
+    padding: 3rem 0;
+    font-size: 2.2rem;
+}
+
+.main-txt{
+    width: 80vw;
+    color: var(--secondary-color);
+    text-align: justify;
+    line-height: 250%;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 1rem 0 3rem 0;
+}
+
+.main-img{
+    width: 80vw;
+    height: 40vw;
+    background-color: var(--secondary-color);
+}
+
+.subtitle{
+    padding-top: 5rem;
+    height: 8vh;
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.subtitle h2{
+    color: var(--secondary-color);
+    font-weight: 400;
+}
+
+.main-line{
+    width: 10vw;
+    height: 1px;
+    background-color: var(--secondary-color);
+}
+
+.main-btn{
+    background-color: var(--secondary-color);
+    width: 50vw;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s;
+    padding: .7rem .3rem;
+}
+
+.main-btn:hover{
+    background-color: var(--fourth-color);
+}
+
+.main-btn a{
+    color: var(--third-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+/*----- Footer -----*/
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-img{
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-info{
+    padding: 3rem 0;
+}
+
+.footer-info h2, .footer-articles h2{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--secondary-color);
+}
+
+.footer-info p{
+    width: 80vw;
+    font-size: 1.5rem;
+    line-height: 250%;
+    font-weight: 300;
+    color: var(--secondary-color);
+    padding-top: 3rem;
+    text-align: justify;
+}
+
+.footer-line{
+    width: 80vw;
+    height: 2px;
+    background-color: var(--secondary-color);
+}
+
+.footer-articles{
+    padding-top: 3rem;
+}
+
+.footer-articles h2{
+    padding-bottom: 0;
+}
+
+.articles-a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-articles a{
+    text-decoration: none;
+    margin: 6rem 0;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+}
+
+.footer-articles a:hover{
+    font-weight: 600;
+}
+
+.footer-contact img{
+    width: 65vw;
+    padding: 3rem 0;
+}
+
+.contact-element{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
+}
+
+.contact-element p{
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+.contact-element img{
+    width: 2.5rem;
+}
