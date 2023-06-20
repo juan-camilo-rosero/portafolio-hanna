@@ -12,7 +12,6 @@
 
 html{
     background-color: var(--primary-color);
-    height: 200vh;
 }
 
 p::selection, input::selection, h1::selection, h2::selection, a::selection{
@@ -34,7 +33,12 @@ header{
     justify-content: center;
     align-items: center;
     z-index: 100;
-    position: fixed;
+    position: sticky;
+    top: 0;
+}
+
+header h1{
+    display: none;
 }
 
 h1{
@@ -46,8 +50,8 @@ h1{
     width: 100vw;
     height: 1px;
     background-color: var(--secondary-color);
-    position: fixed;
-    margin-top: 15.1vh;
+    position: absolute;
+    top: 15vh;
 }
 
 .row{
@@ -63,14 +67,14 @@ h1{
 }
 
 .menu{
-    width: 5rem;
-    height: 5rem;
+    width: 6rem;
+    height: 4.5rem !important;
+    cursor: pointer;
 }
 
 /*----- Main -----*/
 
 main{
-    padding-top: 15vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -171,6 +175,10 @@ footer{
     color: var(--secondary-color);
 }
 
+.desk-line{
+    display: none;
+}
+
 .footer-info p{
     width: 80vw;
     font-size: 1.5rem;
@@ -189,10 +197,6 @@ footer{
 
 .footer-articles{
     padding-top: 3rem;
-}
-
-.footer-articles h2{
-    padding-bottom: 0;
 }
 
 .articles-a{
@@ -235,4 +239,160 @@ footer{
 
 .contact-element img{
     width: 2.5rem;
+}
+
+/*----- Responsive -----*/
+
+@media (min-width: 1000px){
+
+    p::selection, input::selection, h1::selection, h2::selection, a::selection{
+        color: var(--third-color)
+    }
+    
+    html{
+        background-color: var(--primary-color);
+    }
+
+    /*----- Header -----*/
+
+    .line{
+        height: 2px;
+        width: 80vw;
+    }
+
+    header{
+        width: 80vw;
+        margin-left: 10vw;
+    }
+
+    header h1{
+        display: block;
+        font-size: 2.5rem;
+    }
+
+    .menu{
+        width: 5rem;
+        height: 3.5rem !important;
+    }
+
+    /*----- Main -----*/
+
+    main{
+        width: 80vw;
+        margin-left: 10vw;
+        margin-top: 10vh;
+        padding-bottom: 15vh;
+    }
+
+    .main-title{
+        font-size: 3rem;
+        padding-top: 15vh;
+        padding-bottom: 10vh;
+    }
+
+    .main-img{
+        width: 65vw;
+        height: 32.5vw;
+        background-color: var(--secondary-color);
+    }
+
+    .main-txt{
+        width: 65vw;
+        font-size: 2rem;
+        padding: 5rem 0;
+    }
+    
+    .subtitle{
+        padding-top: 8rem;
+        height: 10vh;
+        width: 65vw;
+        font-size: 2rem;
+    }
+    
+    .main-btn{
+        width: auto;
+        height: 2rem;
+        padding: 1rem 6vw;
+    }
+    
+    .main-btn a{
+        font-size: 2rem;
+    }
+
+    /*----- Footer -----*/
+
+    footer{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: initial;
+        padding: 5vh 0;
+        width: 80vw;
+        margin-left: 10vw;
+    }
+
+    .footer-info{
+        width: 20vw;
+    }
+
+    .footer-info p{
+        width: 20vw;
+        font-size: 1.3rem;
+    }
+
+
+    .desk-line{
+        display: block;
+        width: 20vw;
+        height: 2px;
+        background-color: var(--secondary-color);
+        margin-top: 3rem;
+    }
+    
+
+    .footer-line{
+        display: none;
+    }
+
+    .footer-articles{
+        width: 20vw;
+    }
+
+    .footer-articles a{
+        margin: 2rem 0;
+        font-size: 1.3rem;
+    }
+
+    .footer-contact{
+        width: 20vw;
+    }
+
+    .footer-contact img{
+        width: 15vw;
+    }
+
+    .contact-element{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 20vw;
+    }
+
+    .contact-element p{
+        font-size: 1.3rem;
+    }
+
+    .footer-img{
+        width: 20vw;
+    }
+
+    .footer-img img{
+        margin-top: -5vh;
+        padding: 3rem 0 1rem 0;
+        width: 12vw;
+    }
+
+    .contact-element img{
+        width: 1.5rem;
+        padding: 2rem 0;
+    }
 }

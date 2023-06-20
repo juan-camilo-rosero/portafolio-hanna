@@ -113,7 +113,7 @@ h1{
 
 @media (min-width: 1000px){
     h1{
-        font-size: 4rem;
+        font-size: 2.5rem;
         font-weight: 300;
     }
 
@@ -131,22 +131,24 @@ h1{
     }
 
     .inputs p{
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-weight: 300;
         text-align: center;
     }
 
     .inputs input{
-        padding: 1rem 2vw;
-        width: 25vw;
-        font-size: 2.5rem;
+        padding: .5rem 2vw;
+        border-width: 1px;
+        background-color: transparent;
+        width: 30vw;
+        font-size: 1.8rem;
         text-align: center;
     }
 
     #login-btn{
         width: 20vw;
-        padding: 1rem 2vw;
-        font-size: 2.5rem;
+        padding: .5rem 5vw;
+        font-size: 2rem;
         color: var(--primary-color);
     }
 }
