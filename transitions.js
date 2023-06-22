@@ -27,7 +27,7 @@ export function logoChange(btn, div, newClass){
     $btn.addEventListener("click", e => {
         $div.classList.add(newClass)
         setTimeout(() => {
-            location.href = "http://127.0.0.1:5500/otros/portafolio_hanna/index.html";
+            location.href = "https://juan-camilo-rosero.github.io/portafolio-hanna/";
         }, 500);
     })
 }
