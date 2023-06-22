@@ -14,13 +14,27 @@ html{
     background-color: var(--primary-color);
 }
 
-p::selection, input::selection, h1::selection, h2::selection, a::selection{
+p::selection, input::selection, h1::selection, h2::selection, a::selection, textarea::selection{
     background-color: var(--secondary-color);
     color: var(--primary-color)
 }
 
 .none{
     display: none;
+}
+
+.transition{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    background-color: var(--secondary-color);
+    transition: .5s;
+}
+
+.right{
+    width: 100vw;
 }
 
 /*----- Header -----*/
@@ -32,7 +46,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 100;
+    z-index: 99;
     position: sticky;
     top: 0;
 }
@@ -66,9 +80,13 @@ h1{
     padding: 0 2rem;
 }
 
+.h-logo{
+    cursor: pointer;
+}
+
 .menu{
-    width: 6rem;
-    height: 4.5rem !important;
+    width: 5.5rem;
+    height: 3.5rem !important;
     cursor: pointer;
 }
 
@@ -118,6 +136,7 @@ main{
 .subtitle h2{
     color: var(--secondary-color);
     font-weight: 400;
+    text-align: center;
 }
 
 .main-line{
@@ -129,13 +148,11 @@ main{
 .main-btn{
     background-color: var(--secondary-color);
     width: 50vw;
-    height: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     transition: .5s;
-    padding: .7rem .3rem;
 }
 
 .main-btn:hover{
@@ -146,6 +163,74 @@ main{
     color: var(--third-color);
     text-decoration: none;
     font-size: 1.5rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: .7rem .3rem;
+}
+
+/*----- Form -----*/
+
+.form-sec{
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.form-sec form{
+    width: 100%;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+.form-sec p{
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+}
+
+.form-sec input, textarea{
+    background-color: var(--third-color);
+    border: var(--secondary-color) solid 1px;
+    font-size: 1.5rem;
+    text-align: center;
+    outline: none;
+    color: var(--secondary-color);
+    padding: 1rem;
+    width: calc(80vw - 2rem);
+}
+
+textarea{
+    resize: none;
+    margin-bottom: 5rem;
+}
+
+.form-img{
+    display: none;
+}
+
+.form-sec button{
+    display: block;
+    margin: auto;
+    width: 50vw;
+    padding: 1rem .5rem;
+    font-size: 1.5rem;
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+    cursor: pointer;
+    transition: .5s;
+    border: none;
+}
+
+.form-sec button:hover{
+    background-color: var(--fourth-color);
 }
 
 /*----- Footer -----*/
@@ -267,7 +352,7 @@ footer{
 
     header h1{
         display: block;
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .menu{
@@ -285,7 +370,7 @@ footer{
     }
 
     .main-title{
-        font-size: 3rem;
+        font-size: 2.5rem;
         padding-top: 15vh;
         padding-bottom: 10vh;
     }
@@ -298,7 +383,7 @@ footer{
 
     .main-txt{
         width: 65vw;
-        font-size: 2rem;
+        font-size: 1.5rem;
         padding: 5rem 0;
     }
     
@@ -311,12 +396,63 @@ footer{
     
     .main-btn{
         width: auto;
-        height: 2rem;
-        padding: 1rem 6vw;
     }
     
     .main-btn a{
-        font-size: 2rem;
+        font-size: 1.5rem;
+        padding: 1rem 6vw;
+        width: 100%;
+        height: 100%;
+    }
+
+    /*----- Form -----*/
+
+    .form-sec{
+        width: 65vw;
+        justify-content: space-between;
+    }
+
+    .form-sec form{
+        width: 50%;
+    }
+
+    .input{
+        align-items: start;
+        padding: 2rem 0;
+    }
+
+    .form-sec p{
+        margin-bottom: 1.5rem;
+    }
+
+    .form-sec input, textarea{
+        text-align: left;
+        padding: .75rem 1rem;
+        width: calc(100% - 2rem);
+        font-size: 1.3rem;
+    }
+
+    textarea{
+        margin-bottom: 3rem;
+    }
+
+    .form-img{
+        display: block;
+        width: 40%;
+        height: 30rem;
+        background-color: var(--secondary-color);
+        margin-top: 2rem;
+    }
+
+    .form-sec button{
+        display: block;
+        margin: 0;
+        width: 100%;
+        padding: 1rem .5rem;
+    }
+
+    .form-sec button:hover{
+        background-color: var(--fourth-color);
     }
 
     /*----- Footer -----*/
